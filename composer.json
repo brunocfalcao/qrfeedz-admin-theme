@@ -1,0 +1,30 @@
+{
+    "name": "brunocfalcao/qrfeedz-admin-theme",
+    "description": "QRFeedz Admin Nova theme",
+    "keywords": [
+        "laravel",
+        "nova",
+        "qrfeedz"
+    ],
+    "license": "MIT",
+    "require": {
+        "php": "^7.3|^8.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Brunocfalcao\\QrfeedzAdminTheme\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Brunocfalcao\\QrfeedzAdminTheme\\AdminThemeServiceProvider"
+            ]
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
