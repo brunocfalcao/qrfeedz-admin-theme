@@ -7,7 +7,10 @@ mix
   .setPublicPath('dist')
   .js('resources/js/asset.js', 'js')
   .vue({ version: 3 })
-  .css('resources/css/asset.css', 'css')
+  //.css('resources/css/asset.css', 'css')
+  .postCss("resources/css/asset.css", "css", [
+    require("tailwindcss"),
+  ])
   .alias({
     '@': path.join(__dirname, 'resources/js/'),
   })

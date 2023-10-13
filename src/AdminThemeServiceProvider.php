@@ -8,24 +8,23 @@ use Laravel\Nova\Nova;
 
 class AdminThemeServiceProvider extends ServiceProvider
 {
-    /**
-     * Bootstrap any application services.
-     *
-     * @return void
-     */
     public function boot()
     {
+        $this->loadViewsFrom(
+            __DIR__.'/../resources/views',
+            'qrfeedz-admin-theme'
+        );
+
+        Nova::footer(function ($request) {
+            return view('qrfeedz-admin-theme::partials.footer')->render();
+        });
+
         Nova::serving(function (ServingNova $event) {
-            Nova::script('qrfeedz-admin-theme', __DIR__.'/../dist/js/asset.js');
-            Nova::style('qrfeedz-admin-theme', __DIR__.'/../dist/css/asset.css');
+            //Nova::script('qrfeedz-admin-theme', __DIR__.'/../dist/js/asset.js');
+            //Nova::style('qrfeedz-admin-theme', __DIR__.'/../dist/css/asset.css');
         });
     }
 
-    /**
-     * Register any application services.
-     *
-     * @return void
-     */
     public function register()
     {
         //
