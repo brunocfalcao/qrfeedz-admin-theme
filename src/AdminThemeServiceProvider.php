@@ -21,7 +21,7 @@ class AdminThemeServiceProvider extends ServiceProvider
 
         Nova::serving(function (ServingNova $event) {
             //Nova::script('qrfeedz-admin-theme', __DIR__.'/../dist/js/asset.js');
-            //Nova::style('qrfeedz-admin-theme', __DIR__.'/../dist/css/asset.css');
+            Nova::style('qrfeedz-admin-theme', __DIR__.'/../dist/css/asset.css');
         });
     }
 
